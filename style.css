@@ -27,3 +27,10 @@ h1{
 #choises button:hover{
     background-color: #4E8098;
 }
+#player, #computer {
+    font-size: 2.5rem;
+}
+#result{
+    font-size: 5rem;
+    margin: 30px 0;
+}
