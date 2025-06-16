@@ -2,6 +2,10 @@ const choises = ['Rock', 'Paper', 'Sissors'];
 const pla3yer = document.getElementById("player");
 const computer = document.getElementById("computer");
 const result = document.getElementById("result");
+const playerscore = document.getElementById("playerscore");
+const computerscore = document.getElementById("computerscore");
+let playerscoredisplay = 0;
+let computerscoredisplay =0; 
 
 function playgame(playerchoice){
 
@@ -30,4 +34,14 @@ function playgame(playerchoice){
          computer.textContent = `Computer: ${computerchoice}`;
          result.textContent = resultchoice;
 
+        switch(resultchoice){
+            case "You Win!":
+                playerscoredisplay++;
+                playerscore.textContent = playerscoredisplay;
+                break;
+            case "You Lose!":
+                computerscoredisplay++;
+                computerscore.textContent = computerscoredisplay;
+                break;
+        }
 }
